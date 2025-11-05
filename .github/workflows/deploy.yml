@@ -46,7 +46,7 @@ jobs:
       - name: Clone website repository information
         uses: actions/checkout@v4
         with:
-          repository: GDMMORPG/gdmmorpg.github.io
+          repository: GDMMORPG/docs
           token: ${{ steps.app-token.outputs.token }}
           path: static-site-source/.pages
           fetch-depth: 0
