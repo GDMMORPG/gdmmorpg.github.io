@@ -45,20 +45,11 @@ export default async function MarkdownPage({ params }: PageProps) {
     const reading_time_text = reading_time_minutes <= 1 ? '1 min read' : `${reading_time_minutes} mins read`;
 
     return (
-        <div className="min-h-screen bg-white dark:bg-zinc-900">
-            <div className="max-w-6xl mx-auto px-4 py-8">
-            {/* Back button */}
-            <Link href="/blogs" className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 mb-6">
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-                Back to Blogs
-            </Link>
-
-            <div className="flex gap-8">
+        <div className="min-h-screen">
+            <div className="flex gap-8 p-8">
                 {/* Left content area */}
                 <div className="flex-1">
-                <article className="bg-zinc-50 dark:bg-zinc-800 p-6 rounded-lg border border-zinc-200 dark:border-zinc-700">
+                <article>
                     {/* Title */}
                     {documentation.title && (
                     <h1 className="text-4xl font-bold text-zinc-900 dark:text-white mb-2">
@@ -99,7 +90,6 @@ export default async function MarkdownPage({ params }: PageProps) {
                     </div>
                 </div>
                 )}
-            </div>
             </div>
         </div>
     );
